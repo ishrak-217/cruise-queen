@@ -41,7 +41,7 @@ nav ul li a:hover, a.active{
 .main-content{
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 50px;
+    gap: 70px;
     align-items: center;
 }
 .booking-content{
@@ -69,14 +69,14 @@ nav ul li a:hover, a.active{
     margin: 10px 0px;
 }
 .booking-form  .input-group{
-    margin: 5px 0;
+    margin: 10px 0;
 }
 .booking-form  .calculations{
     margin: 10px 0;
 }
 .booking-form  .calculations p{
     font-weight: 500;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 .booking-form input{
     width: 100%;
@@ -94,7 +94,7 @@ nav ul li a:hover, a.active{
     align-items: center;
 }
 .inp-width{
-    min-width: 250px;
+    min-width: 200px;
 }
 .booking-form .inputs{
     display: grid;
