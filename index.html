@@ -29,15 +29,15 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="login-area" class="main-content container">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
                 scrambled it to make a type specimen book.</p>
         </div>
-
 
         <div class="booking-form">
             <h3>Book Ocean Time</h3>
@@ -51,8 +51,8 @@
             </div>
             <div class="inputs">
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
+                    <label for="">Departure </label>
+                    <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -92,7 +92,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="total-price">$500</p>
+                        <p id="total-price">$250</p>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                         <p>Charge <small>(10% VAT)</small></p>
                     </div>
                     <div class="right">
-                        <p id="tax-amount">$50</p>
+                        <p id="tax-amount">$25</p>
                     </div>
                 </div>
                 <hr>
@@ -110,13 +110,28 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="grand-total">$550</p>
+                        <p id="grand-total">$275</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="login" class="btn-style">Book Now</button>
         </div>
     </main>
+    <div id="information-area" class="container">
+        <div class="row ">
+            <div class="col-md-6">
+                <div class="status">
+                    <img src="images/success.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="status">
+                    <h2 class="align-top">Thank you for your purchase! We'll get back to you soon.</h2>
+                    <h4 class="align-bottom"><small>Developed by Ishrak Al Hasib.</small></h4>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         function handleTicketChange(ticket, isIncrease) {
             const ticketInput = document.getElementById(ticket + '-count');
@@ -160,8 +175,16 @@
             const productCount = parseInt(productInput.value);
             return productCount;
         }
+
+        // login button event handler
+        const loginBtn = document.getElementById("login");
+        loginBtn.addEventListener("click", function () {
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+            const transactionArea = document.getElementById("information-area");
+            transactionArea.style.display = "block";
+        });
     </script>
-    <!--Thank You-->
 </body>
 
 </html>
